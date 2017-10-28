@@ -1,0 +1,33 @@
+package com.object;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class ObjectstreamDemo {
+public static void main(String[] args) throws Exception {
+	File f= new File("file/sj");
+	WriterObject(f);
+	ReaderObject(f);
+}
+
+private static void WriterObject(File f) throws Exception {
+	// TODO Auto-generated method stub
+	ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream(f));
+	out.writeObject(new Usera("sj","male",20));
+	out.close();
+	
+}
+private static void ReaderObject(File f) throws Exception {
+	// TODO Auto-generated method stub
+	ObjectInputStream in=new ObjectInputStream(new FileInputStream(f));
+	 Usera use=(Usera)in.readObject();
+	 //Object use=in.readObject();
+	 System.out.println(use);
+
+	
+}
+
+}

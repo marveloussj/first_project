@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;db.properties&apos; to &apos;反射机制/src/com.loadresource&apos;&#x0D;&#x0A;- Original project: &apos;反射机制&apos;&#x0D;&#x0A;- Destination element: &apos;反射机制/src/com.loadresource&apos;&#x0D;&#x0A;- Original element: &apos;db.properties&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;com.loadresource" element1="resources/db.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1492857943524" units="0" version="1.0"/>
+</session>

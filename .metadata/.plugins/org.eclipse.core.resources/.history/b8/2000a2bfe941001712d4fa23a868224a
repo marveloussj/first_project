@@ -1,0 +1,34 @@
+package com.msj_02_smis_dao;
+
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Beanhandler<T> implements IStudentHandler<T>{
+	private Class<T> clz;
+	
+	public Beanhandler(Class<T> clz) {
+		this.clz=clz;
+	}
+	@Override
+	public T handle(ResultSet rs) throws SQLException {
+		try {
+			T obj = clz.newInstance();
+			BeanInfo info = Introspector.getBeanInfo(clz, Object.class);
+			if(rs.next()){
+				PropertyDescriptor[] pd = info.getPropertyDescriptors();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		
+		
+		
+		return null;
+	}
+
+}

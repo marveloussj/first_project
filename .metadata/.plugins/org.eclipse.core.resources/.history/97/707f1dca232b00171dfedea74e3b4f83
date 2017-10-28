@@ -1,0 +1,10 @@
+package com.danli;
+/**
+ * 枚举类enum
+ * @author sj
+ * 不能延时加载
+ *
+ */
+public class Meiju {
+
+}

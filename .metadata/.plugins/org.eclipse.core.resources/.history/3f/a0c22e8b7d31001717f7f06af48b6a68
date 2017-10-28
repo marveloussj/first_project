@@ -1,0 +1,45 @@
+package grosstest;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+/*3.1:获取到要测试的字节码对象
+3.2:获取字节码对象中的所有方法
+3.3:归类区分带有不同注解的方法,分3类
+3.4:迭代所有要执行的方法
+      在所有要执行的方法前先执行MyBefore注解的方法
+      在所有要执行的方法后再执行MyAfter注解的方法*/
+public class App {
+	
+	public static void main(String[] args) throws Exception {
+		Method before=null;
+		Method after=null;
+		List<Method> list= new ArrayList<Method>();
+		Class<?> clz=MyUnitTest.class;
+		Object obj = clz.newInstance();
+		Method[] ms = clz.getMethods();
+		for (Method m : ms) {
+			if(m.isAnnotationPresent(MyBefore.class)){
+				before=m;
+			}else if(m.isAnnotationPresent(MyAfter.class)){
+				after=m;				
+			}else if(m.isAnnotationPresent(MyTest.class)){
+				list.add(m);
+			}
+		}
+		for (Method md : list) {
+			try {
+				before.invoke(obj);
+				md.invoke(obj);
+				after.invoke(obj);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		
+			}
+		}
+	}
+
+}

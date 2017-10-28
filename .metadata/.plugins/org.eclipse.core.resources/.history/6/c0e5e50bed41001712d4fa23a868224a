@@ -1,0 +1,18 @@
+package com.msj_02_smis_dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class BeanListhandler<T> implements IStudentHandler<T> {
+	private Class<T> clz;
+
+	public BeanListhandler(Class<T> clz) {
+		this.clz = clz;
+	}
+	@Override
+	public T handle(ResultSet rs) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

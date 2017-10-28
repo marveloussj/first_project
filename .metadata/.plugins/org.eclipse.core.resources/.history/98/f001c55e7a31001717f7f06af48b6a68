@@ -1,0 +1,14 @@
+package grosstest;
+
+import org.junit.Test;
+
+public class MyUnitTest {
+	@Test
+	public void save(){
+		System.out.println("MyUnitTest.save()");
+	}
+	@Test
+	public void updata(){
+		System.out.println("MyUnitTest.updata()");
+	}
+}

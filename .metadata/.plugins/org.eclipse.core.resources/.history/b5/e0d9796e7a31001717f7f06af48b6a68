@@ -1,0 +1,24 @@
+package grosstest;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class MyUnitTest {
+	@Before
+	public void init(){
+		System.out.println("MyUnitTest.init()");
+	}
+	@After
+	public void destroy(){
+		System.out.println("MyUnitTest.destroy()");
+	}
+	@Test
+	public void save(){
+		System.out.println("MyUnitTest.save()");
+	}
+	@Test
+	public void updata(){
+		System.out.println("MyUnitTest.updata()");
+	}
+}

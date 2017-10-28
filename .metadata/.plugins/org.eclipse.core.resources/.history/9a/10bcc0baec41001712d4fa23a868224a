@@ -1,0 +1,68 @@
+package com.msj_02_smis_dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class StudentDaoimpl implements IStudentDao {
+
+	@Override
+	public void save(Student stu) {	
+		String sql = "INSERT  Student(name,age) value(?,?)";
+		Object param[]={stu.getName(),stu.getAge()};
+		JdbcTemplate.updata(sql, param);
+	
+
+	}
+
+	@Override
+	public void delete(Long id) {
+		String sql = "delete from Student where id=?";
+		JdbcTemplate.updata(sql, id);
+	}
+
+	@Override
+	public void updata(Student stu) {
+		String sql = "update  Student set name=?,age=? where id=?";
+		Object param[]={stu.getName(),stu.getAge(),stu.getId()};
+		JdbcTemplate.updata(sql, param);
+	
+		
+	}
+
+	@Override
+	public Student get(Long id) {
+		String sql = "select *from Student where id=?";
+	   return JdbcTemplate.query(sql,new Beanhandler<Student>(Student.class) ,id);
+	
+	}
+
+	@Override
+	public List<Student> list() {
+		String sql = "select *from Student";
+		return JdbcTemplate.query(sql,new StudentHander());
+	}
+	
+	private class StudentHander implements IStudentHandler<List<Student>>{
+
+	@Override
+	public List<Student> handle(ResultSet rs) throws SQLException {
+		List<Student> list = new ArrayList<Student>();
+		while (rs.next()) {
+			Student stu = new Student(rs.getLong("id"), rs.getString("name"), rs.getString("age"));
+			list.add(stu);}
+		return list;
+	}
+
+
+	}
+}
+
+
+
+	
+	
+

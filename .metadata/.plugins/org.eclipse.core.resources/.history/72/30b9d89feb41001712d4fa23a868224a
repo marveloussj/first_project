@@ -1,0 +1,47 @@
+package com.msj_02_smis_dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+import com.msj_01_smis_dao.IStudentDao;
+import com.msj_01_smis_dao.StudentDaoimpl;
+import com.msj_01_smis_domain.Student;
+
+public class StudentDaoTest {
+	private IStudentDao dao=new StudentDaoimpl();
+	@Test
+	public void testSave() {
+		Student stu =new Student(null,"sjj","17");
+		dao.save(stu);
+		
+	}
+
+	@Test
+	public void testDelete() {
+		dao.delete(4L);
+
+	}
+
+	@Test
+	public void testUpdata() {
+		Student stu =new Student(4L,"sj","18");
+		dao.updata(stu);
+		}
+
+	@Test
+	public void testGet() {
+		Student stu = dao.get(5L);
+		System.out.println(stu);
+	}
+
+	@Test
+	public void testList() {
+		List<Student> list =dao.list();
+		for (Student stu : list) {
+			System.out.println(stu);
+		}
+	}
+
+}

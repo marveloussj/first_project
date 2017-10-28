@@ -1,0 +1,103 @@
+package com.array;
+public class Basketballpalyers {
+	
+private static Integer[] players =null;
+private static int size=0;
+public static void chushihua(int chushizhi){
+	players = new Integer[chushizhi];
+}
+public static void add(Integer playersnum){
+	players[size]=playersnum;
+	size++;
+}
+//查找索引，给出对应的球衣号
+private static Integer get(int i) {
+return players[i];
+}
+  //反得到
+private static int fanget(int i) {
+	for (int j = 0; j < size; j++) {
+		if(players[j].equals(i)){
+			return j;
+		}
+		
+	}
+	return -1;
+}
+
+private static void set(int i, Integer j) {
+	// TODO Auto-generated method stub
+	players[i]=j;
+}
+
+
+private static void update(Integer i, Integer j) {
+	// TODO Auto-generated method stub
+	/*for (int j2 = 0; j2 < size; j2++) {
+		if(players[j2]==i){
+			players[j2]=j;
+		}}*/
+		int a=fanget(i);
+		if(a>=0){
+			set(a,j);
+			
+	}
+	
+}
+
+private static void delete(int i) {
+	// TODO Auto-generated method stub
+	for (int j = i; j < size-1; j++) {
+		players[j]=players[j+1];
+		}players[size]=null;
+		size--;
+}
+
+public static void printf(){
+	if(players ==null)
+	{
+		System.out.println("null");
+	}
+	if(size==0){
+		System.out.println("[]");
+	}
+	StringBuilder sj=new StringBuilder(size*3-1);
+	sj.append("[");
+	for (int i = 0; i < size; i++) {
+		sj.append(players[i]);
+		if(i != size-1){
+			sj.append(",");
+		}
+		else{
+			sj.append("]");
+		}
+	}
+	
+	System.out.println(sj.toString());
+}
+
+public static void main(String[] args) {
+	chushihua(5);
+	add(11);
+	add(22);
+	add(33);
+	add(44);
+	add(55);
+	printf();
+	
+		//Integer num =get(2);
+		//System.out.println(num);
+		//int i=fanget(33);
+		//System.out.println(i);
+	//set(2,333);
+	//printf();
+	//update(33,888);
+	//printf();
+	delete(2);
+	printf();
+}
+
+
+
+
+}

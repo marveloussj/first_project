@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><contracts>
+	<linkman id="1">
+		<name>沈杰</name>
+		<email>sj7777777@163.com</email>
+		<gander>男</gander>
+	</linkman>
+	<linkman id="2">
+		<name>sj</name>
+		<email>791075967@163.com</email>
+		<gander>男</gander>
+	</linkman>
+<linkman><email>sj@163.com</email><name>大哥</name><gander>男</gander></linkman><linkman><email>sj@163.com</email><name>大哥</name><gander>男</gander></linkman></contracts>

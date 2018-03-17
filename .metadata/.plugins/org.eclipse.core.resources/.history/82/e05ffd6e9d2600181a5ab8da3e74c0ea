@@ -1,0 +1,11 @@
+package xyz.marsj.o2o.mapper;
+
+import xyz.marsj.o2o.entity.Shop;
+
+public interface ShopMapper {
+	//
+	//新增店铺
+	int insertShop(Shop shop);
+	//更新店铺
+	int updateShop(Shop shop);
+}

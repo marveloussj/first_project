@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="jdbcUtil" class="xyz.marsj.spring.mvc.JdbcUtil" init-method="init"></bean>
+    <bean id="employeeDao" class="xyz.marsj.spring.mvc.EmployeeDaoImpl">
+    	<property name="jdbcUtil" ref="jdbcUtil"></property>
+    </bean>
+    <bean id="employeeService" class="xyz.marsj.spring.mvc.EmployeeServiceImpl">
+    	<property name="dao" ref="employeeDao"></property>
+    </bean>
+    <bean id="employeeAction" class="xyz.marsj.spring.mvc.EmployeeAction" scope="prototype">
+    	<property name="service" ref="employeeAction"></property>
+    </bean>
+
+ 
+
+
+</beans>

@@ -1,0 +1,16 @@
+package xyz.marsj.o2o.service;
+
+import java.io.InputStream;
+
+import xyz.marsj.o2o.dto.ShopExecution;
+import xyz.marsj.o2o.entity.Shop;
+
+public interface IShopService {
+	//根据Id获取店铺信息
+	Shop queryByShopId(long ShopId);
+	//修改店铺信息
+	ShopExecution modifyShop(Shop shop,InputStream shopImgInputStream,String fileName);
+	//注册店铺
+	ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName);
+	
+}

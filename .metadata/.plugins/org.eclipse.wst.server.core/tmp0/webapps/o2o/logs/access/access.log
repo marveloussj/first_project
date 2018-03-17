@@ -1,0 +1,384 @@
+2018-03-17 16:49:24.045 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 16:49:24.155 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 16:49:24.222 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 16:49:24.238 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 16:49:24.239 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 16:49:24.242 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 16:49:28.964 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:49:28.966 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:49:28.973 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:49:54.644 [http-nio-8080-exec-10] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:49:54.645 [http-nio-8080-exec-10] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:49:54.662 [http-nio-8080-exec-10] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:50:21.382 [http-nio-8080-exec-1] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:50:21.383 [http-nio-8080-exec-1] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:50:21.390 [http-nio-8080-exec-1] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:50:22.180 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:50:22.182 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:50:22.185 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:50:40.433 [http-nio-8080-exec-8] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:50:40.434 [http-nio-8080-exec-8] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:50:40.437 [http-nio-8080-exec-8] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:50:56.084 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:50:56.085 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:50:56.090 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:51:06.815 [http-nio-8080-exec-6] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:51:06.817 [http-nio-8080-exec-6] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:51:06.850 [http-nio-8080-exec-6] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:51:20.757 [http-nio-8080-exec-2] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:51:20.758 [http-nio-8080-exec-2] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:51:20.761 [http-nio-8080-exec-2] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 16:51:21.737 [http-nio-8080-exec-5] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 16:51:21.738 [http-nio-8080-exec-5] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 16:51:21.743 [http-nio-8080-exec-5] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:26:56.352 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 17:26:56.480 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 17:26:56.555 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 17:26:56.572 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 17:26:56.572 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 17:26:56.575 [http-nio-8080-exec-3] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 17:26:59.440 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:26:59.442 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:26:59.449 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:28:37.636 [http-nio-8080-exec-2] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:28:37.637 [http-nio-8080-exec-2] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:28:37.639 [http-nio-8080-exec-2] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:35:15.365 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 17:35:15.427 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 17:35:15.459 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 17:35:15.470 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 17:35:15.471 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 17:35:15.473 [http-nio-8080-exec-4] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 17:35:18.501 [http-nio-8080-exec-5] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:35:18.502 [http-nio-8080-exec-5] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:35:18.509 [http-nio-8080-exec-5] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:37:07.139 [http-nio-8080-exec-7] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 17:37:07.158 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 17:37:07.201 [http-nio-8080-exec-7] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 17:37:07.202 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 17:37:07.287 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 17:37:07.307 [http-nio-8080-exec-7] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 17:37:07.316 [http-nio-8080-exec-7] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 17:37:07.316 [http-nio-8080-exec-7] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 17:37:07.318 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 17:37:07.319 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 17:37:07.322 [http-nio-8080-exec-7] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 17:37:07.324 [http-nio-8080-exec-5] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 17:37:10.468 [http-nio-8080-exec-3] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:37:10.469 [http-nio-8080-exec-3] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:37:10.479 [http-nio-8080-exec-3] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:40:04.657 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:40:04.657 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:40:04.660 [http-nio-8080-exec-7] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:40:08.214 [http-nio-8080-exec-1] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:40:08.216 [http-nio-8080-exec-1] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:40:08.223 [http-nio-8080-exec-1] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:40:12.139 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:40:12.140 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:40:12.142 [http-nio-8080-exec-4] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:45:01.142 [http-nio-8080-exec-8] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:45:01.145 [http-nio-8080-exec-8] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:45:01.148 [http-nio-8080-exec-8] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:47:13.874 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 17:47:13.932 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 17:47:13.965 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 17:47:13.975 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 17:47:13.976 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 17:47:13.977 [http-nio-8080-exec-8] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 17:47:15.959 [http-nio-8080-exec-3] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:47:15.960 [http-nio-8080-exec-3] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:47:15.971 [http-nio-8080-exec-3] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:49:28.823 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:49:28.824 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:49:28.827 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:50:18.107 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:50:18.109 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:50:18.115 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:51:18.816 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:51:18.817 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:51:18.846 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:52:05.627 [http-nio-8080-exec-15] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:52:05.630 [http-nio-8080-exec-15] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:52:05.636 [http-nio-8080-exec-15] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:53:49.761 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:53:49.764 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:53:49.788 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:54:16.644 [http-nio-8080-exec-16] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:54:16.645 [http-nio-8080-exec-16] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:54:16.648 [http-nio-8080-exec-16] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:54:34.749 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:54:34.750 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:54:34.759 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:54:38.878 [http-nio-8080-exec-12] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:54:38.879 [http-nio-8080-exec-12] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:54:38.886 [http-nio-8080-exec-12] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:54:48.393 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:54:48.393 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:54:48.395 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:54:50.729 [http-nio-8080-exec-17] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:54:50.730 [http-nio-8080-exec-17] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:54:50.734 [http-nio-8080-exec-17] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:20.255 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:20.256 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:20.277 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:21.959 [http-nio-8080-exec-14] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:21.960 [http-nio-8080-exec-14] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:21.965 [http-nio-8080-exec-14] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:23.113 [http-nio-8080-exec-15] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:23.116 [http-nio-8080-exec-15] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:23.118 [http-nio-8080-exec-15] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:27.119 [http-nio-8080-exec-19] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:27.120 [http-nio-8080-exec-19] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:27.123 [http-nio-8080-exec-19] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:28.668 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:28.672 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:28.676 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:29.795 [http-nio-8080-exec-16] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:29.796 [http-nio-8080-exec-16] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:29.798 [http-nio-8080-exec-16] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:30.709 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:30.710 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:30.713 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:31.498 [http-nio-8080-exec-12] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:31.499 [http-nio-8080-exec-12] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:31.502 [http-nio-8080-exec-12] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:32.163 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:32.170 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:32.172 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:37.281 [http-nio-8080-exec-15] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 17:55:37.283 [http-nio-8080-exec-15] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 17:55:37.305 [http-nio-8080-exec-15] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 17:55:37.306 [http-nio-8080-exec-15] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 17:55:37.307 [http-nio-8080-exec-15] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 17:55:37.318 [http-nio-8080-exec-15] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 17:55:40.049 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:40.051 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:40.062 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:55:47.863 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:55:47.866 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:55:47.868 [http-nio-8080-exec-18] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:56:04.125 [http-nio-8080-exec-14] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:56:04.129 [http-nio-8080-exec-14] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:56:04.133 [http-nio-8080-exec-14] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:56:05.399 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:56:05.400 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:56:05.409 [http-nio-8080-exec-13] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:56:13.876 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:56:13.877 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:56:13.880 [http-nio-8080-exec-11] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 17:57:44.077 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 17:57:44.079 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 17:57:44.082 [http-nio-8080-exec-20] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 18:10:37.922 [http-nio-8080-exec-17] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 18:10:37.957 [http-nio-8080-exec-17] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 18:10:37.988 [http-nio-8080-exec-17] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 18:10:37.999 [http-nio-8080-exec-17] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 18:10:37.999 [http-nio-8080-exec-17] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 18:10:38.001 [http-nio-8080-exec-17] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 18:17:58.673 [http-nio-8080-exec-22] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2018-03-17 18:17:58.674 [http-nio-8080-exec-22] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				==> Parameters: 8(Long), 0(Integer), 50(Integer)
+2018-03-17 18:17:58.695 [http-nio-8080-exec-22] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopList -
+				<==      Total: 15
+2018-03-17 18:17:58.697 [http-nio-8080-exec-22] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==>  Preparing: SELECT COUNT(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id=? AND s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id 
+2018-03-17 18:17:58.698 [http-nio-8080-exec-22] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				==> Parameters: 8(Long)
+2018-03-17 18:17:58.715 [http-nio-8080-exec-22] DEBUG xyz.marsj.o2o.mapper.ShopMapper.queryShopCount -
+				<==      Total: 1
+2018-03-17 18:18:02.462 [http-nio-8080-exec-25] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 18:18:02.464 [http-nio-8080-exec-25] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 18:18:02.478 [http-nio-8080-exec-25] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 3
+2018-03-17 18:18:23.596 [http-nio-8080-exec-26] DEBUG x.m.o.m.P.batchInsertProductCategory -
+				==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-03-17 18:18:23.598 [http-nio-8080-exec-26] DEBUG x.m.o.m.P.batchInsertProductCategory -
+				==> Parameters: www(String), 3(Integer), null, 15(Long), ew(String), 4(Integer), null, 15(Long)
+2018-03-17 18:18:23.600 [http-nio-8080-exec-26] DEBUG x.m.o.m.P.batchInsertProductCategory -
+				<==    Updates: 2
+2018-03-17 18:18:24.832 [http-nio-8080-exec-27] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id=? ORDER BY priority DESC 
+2018-03-17 18:18:24.833 [http-nio-8080-exec-27] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				==> Parameters: 15(Long)
+2018-03-17 18:18:24.836 [http-nio-8080-exec-27] DEBUG x.m.o.m.ProductCategoryMapper.queryProductCategoryList -
+				<==      Total: 5

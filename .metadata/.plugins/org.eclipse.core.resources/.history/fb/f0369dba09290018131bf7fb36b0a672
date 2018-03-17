@@ -1,0 +1,25 @@
+package xyz.marsj.o2o.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import xyz.marsj.o2o.entity.Area;
+import xyz.marsj.o2o.entity.ProductCategory;
+import xyz.marsj.o2o.mapper.AreaMapper;
+import xyz.marsj.o2o.service.IAreaService;
+import xyz.marsj.o2o.service.IProductCategoryService;
+@Service
+public class ProductCategoryServiceImpl implements IProductCategoryService {
+	@Autowired
+	private ProductCategoryMapper areaMapper;
+
+	@Override
+	public List<ProductCategory> queryProductCategoryList(long shopId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

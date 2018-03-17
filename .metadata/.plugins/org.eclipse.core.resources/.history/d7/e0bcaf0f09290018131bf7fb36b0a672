@@ -1,0 +1,10 @@
+package xyz.marsj.o2o.mapper;
+
+import java.util.List;
+
+import xyz.marsj.o2o.entity.ProductCategory;
+import xyz.marsj.o2o.entity.Shop;
+
+public interface ProductCategoryMapper {
+List<ProductCategory> queryProductCategoryList(long shopId);
+}

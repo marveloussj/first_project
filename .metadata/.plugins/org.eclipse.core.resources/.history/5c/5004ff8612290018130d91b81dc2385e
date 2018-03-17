@@ -1,0 +1,6 @@
+package xyz.marsj.o2o.dto;
+
+public class Result<T> {
+	
+
+}

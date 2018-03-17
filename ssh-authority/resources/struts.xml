@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+  
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+     <constant name="struts.ui.theme" value="simple" />
+   
+ <package name="default" namespace="/" extends="struts-default">
+ 
+ 		<interceptors>
+ 			<interceptor name="loginCheck" class="xyz.marsj.ssh.util.LoginCheckInterceptor"></interceptor>
+ 			<interceptor name="securityCheck" class="xyz.marsj.ssh.util.SecurityCheckInterceptor"></interceptor>
+ 			<interceptor-stack name="myStack">
+ 				<interceptor-ref name="loginCheck"></interceptor-ref>
+ 				<interceptor-ref name="securityCheck"></interceptor-ref>
+ 				<interceptor-ref name="paramsPrepareParamsStack"></interceptor-ref>
+ 			</interceptor-stack>
+ 		</interceptors>
+ 		
+ 		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		<global-results>
+			<result name="error">/WEB-INF/views/common/error.jsp</result>
+			<result name="nopermission">/WEB-INF/views/common/nopermission.jsp</result>
+			<result name="login">login.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception" />
+		</global-exception-mappings>
+		<action name="login" class="loginAction" method="login">
+		<interceptor-ref name="paramsPrepareParamsStack"></interceptor-ref>
+			<result type="redirectAction">
+				<param name="actionName">main</param>
+			</result>
+		</action>
+		<action name="main" class="xyz.marsj.ssh.mvc.MainAction" >
+			<result>/WEB-INF/views/main.jsp</result>
+		</action>
+		<action name="*_*" class="{1}Action" method="{2}">
+			<result type="redirectAction">
+				<param name="actionName">{1}</param>
+			</result>
+			<result name="list">/WEB-INF/views/{1}/list.jsp</result>
+			<result name="input">/WEB-INF/views/{1}/input.jsp</result>
+		</action>
+	</package>
+</struts>
+
+
+

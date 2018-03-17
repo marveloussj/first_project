@@ -1,0 +1,21 @@
+package xyz.marsj.o2o.mapper;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import static org.junit.Assert.assertEquals;
+import xyz.marsj.o2o.BaseTest;
+import xyz.marsj.o2o.entity.Area;
+import xyz.marsj.o2o.entity.ShopCategory;
+
+public class shopCategoryMapperTest extends BaseTest {
+	@Autowired
+	private ShopCategoryMapper shopCategoryMapper;
+	@Test
+	public void testAreaQuery(){
+		List<ShopCategory> list = shopCategoryMapper.queryShopCategory(new ShopCategory());
+		
+		assertEquals(18, list.size());
+	}
+}

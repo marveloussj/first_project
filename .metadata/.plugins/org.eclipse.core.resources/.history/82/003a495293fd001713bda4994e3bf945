@@ -1,0 +1,54 @@
+package xyz.marsj.hibernate.cascade;
+
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
+
+import xyz.marsj.hibernate.util.HibernateUtil;
+
+public class SalaBillDaoImpl implements SalaBillDao {
+
+	@Override
+	public void save(SalaBill bill) {
+		Session session = HibernateUtil.getInstance().openSession();
+		session.beginTransaction();
+		session.save(bill);
+		session.getTransaction().commit();
+		session.close();
+
+	}
+
+	@Override
+	public void update(SalaBill bill) {
+		Session session = HibernateUtil.getInstance().openSession();
+		session.beginTransaction();
+		
+		session.update(bill);
+		session.getTransaction().commit();
+		session.close();
+
+	}
+
+	@Override
+	public void delete(Long id) {
+		Session session = HibernateUtil.getInstance().openSession();
+		session.beginTransaction();
+		SalaBill bill = (SalaBill)session.get(SalaBill.class, id);
+		session.delete(bill);
+		session.getTransaction().commit();
+		session.close();
+
+	}
+
+	@Override
+	public SalaBill get(Long id) {
+		Session session = HibernateUtil.getInstance().openSession();
+		session.beginTransaction();
+		SalaBill bill = (SalaBill)session.get(SalaBill.class, id);
+		Hibernate.initialize(bill);
+		session.getTransaction().commit();
+		session.close();
+		return bill;
+
+	}
+
+}

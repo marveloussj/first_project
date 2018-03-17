@@ -1,0 +1,9 @@
+package xyz.marsj.o2o.dto;
+
+public class Result<T> {
+	private T data;
+	private boolean success;
+	private int errCode;
+	private String errorMsg;
+
+}

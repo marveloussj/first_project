@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://struts.apache.org/dtds/struts-2.5.dtd" uri="file:///D:/360安全浏览器下载/struts-2.5.14.1-all/jar包/struts-2.5.dtd"/>
+  <uri name="http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd" uri="file:///E:/javaee/j2ee/07-Stef/02_hibernate/课堂资料/课堂资料/day1/hibernate-configuration-3.0.dtd"/>
+  <uri name="http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" uri="file:///E:/javaee/j2ee/07-Stef/02_hibernate/课堂资料/课堂资料/day1/hibernate-mapping-3.0.dtd"/>
+  <uri name="http://www.springframework.org/schema/beans" uri="file:///D:/360安全浏览器下载/spring-framework-5.0.3.RELEASE-dist/spring-framework-5.0.3.RELEASE/schema/beans/spring-beans.xsd"/>
+</catalog>

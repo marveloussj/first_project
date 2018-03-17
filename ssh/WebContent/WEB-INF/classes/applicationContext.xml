@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!-- 引入配置文件 -->
+<context:property-placeholder location="classpath:db.properties"/>
+<!-- 配置dataSource -->
+<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+	    <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+</bean>
+<!-- 配置sessionFactory 使用的是hibernate4 -->
+<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"></property>
+	<!-- spring自动扫描hibernate.properties 文件，并载入 -->
+	<!-- spring自动扫描目录 把所有的hbm.xml自动映入 -->
+	<property name="mappingDirectoryLocations" value="classpath:xyz/marsj/ssh/domain"></property>
+</bean>
+<!-- 配置事务管理器 -->
+<bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+	<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+
+<aop:config>
+  	<aop:pointcut expression="execution(* xyz.marsj.ssh.service.impl.EmployeeServiceImpl.*(..))" id="pc"/>
+  	<aop:advisor advice-ref="txAdvice" pointcut-ref="pc"/>
+</aop:config>
+
+<tx:advice id="txAdvice" transaction-manager="txManager">
+	<tx:attributes>
+	
+		<tx:method name="*" rollback-for="java.lang.ArithmeticException"  propagation="REQUIRED" read-only="false"/>
+	</tx:attributes>
+</tx:advice>
+
+<!-- 抽一个baseDao -->
+<bean id="baseDao" abstract="true" >
+	<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<bean id="employeeDao" class="xyz.marsj.ssh.dao.impl.EmployeeDaoImpl" parent="baseDao"></bean>
+
+<bean id="employeeService" class="xyz.marsj.ssh.service.impl.EmployeeServiceImpl">
+	<property name="employeeDao" ref="employeeDao"></property>
+</bean>
+<bean id="employeeAction" class="xyz.marsj.ssh.mvc.EmployeeAction">
+	<property name="employeeService" ref="employeeService"></property>
+</bean>
+</beans>

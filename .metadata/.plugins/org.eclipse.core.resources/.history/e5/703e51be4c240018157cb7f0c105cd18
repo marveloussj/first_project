@@ -1,0 +1,17 @@
+package xyz.marsj.o2o.service.impl;
+
+import java.util.List;
+
+import xyz.marsj.o2o.entity.ShopCategory;
+import xyz.marsj.o2o.service.IShopCategoryService;
+
+public class ShopCategoryServiceImpl implements IShopCategoryService{
+
+	@Override
+	public List<ShopCategory> queryShopCategory(ShopCategory shopCategory) {
+		
+		return null;
+	}
+	
+
+}

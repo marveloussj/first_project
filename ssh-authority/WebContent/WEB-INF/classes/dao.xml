@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<bean id="employeeDao" class="xyz.marsj.ssh.dao.impl.EmployeeDaoImpl" parent="baseDao"></bean>
+<bean id="departmentDao" class="xyz.marsj.ssh.dao.impl.DepartmentDaoImpl" parent="baseDao"></bean>
+<bean id="permissionDao" class="xyz.marsj.ssh.dao.impl.PermissionDaoImpl" parent="baseDao"></bean>
+<bean id="roleDao" class="xyz.marsj.ssh.dao.impl.RoleDaoImpl" parent="baseDao"></bean>
+</beans>

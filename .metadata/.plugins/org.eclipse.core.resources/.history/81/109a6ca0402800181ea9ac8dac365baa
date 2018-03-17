@@ -1,0 +1,73 @@
+package xyz.marsj.o2o.mapper;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import xyz.marsj.o2o.BaseTest2;
+import xyz.marsj.o2o.entity.Area;
+import xyz.marsj.o2o.entity.PersonInfo;
+import xyz.marsj.o2o.entity.Shop;
+import xyz.marsj.o2o.entity.ShopAuthMap;
+import xyz.marsj.o2o.entity.ShopCategory;
+
+public class ShopMapperTest extends BaseTest2 {
+	@Autowired
+	private ShopMapper shopMapper;
+	@Test
+	public void testQueryShopListAndCount(){
+		
+	}
+	
+	@Test
+	public void testQueryShopById(){
+		long shopId=17;
+		Shop result = shopMapper.queryByShopId(shopId);
+		System.out.println(result.getArea().getAreaName());
+		System.out.println(result.getShopName());
+		System.out.println(result.getShopCategory().getShopCategoryName());
+		
+	}
+	
+	@Test
+	public void testInsertShop(){
+		//瞎搞 哈哈
+		//List<ShopAuthMap> list=new ArrayList<ShopAuthMap>();
+		Shop shop=new Shop();
+		PersonInfo owner=new PersonInfo();
+		//ShopAuthMap sap=new ShopAuthMap();
+		
+		Area area=new Area();
+		ShopCategory shopCategory=new ShopCategory();
+		owner.setUserId(8L);
+		area.setAreaId(3L);
+		shopCategory.setShopCategoryId(11L);
+		//sap.setEmployee(owner);
+		//list.add(sap);
+		//shop.setStaffList(list);
+		
+		
+		shop.setOwner(owner);
+		shop.setArea(area);
+		shop.setShopCategory(shopCategory);
+		shop.setShopName("test");
+		shop.setEnableStatus(1);
+		int insertShop = shopMapper.insertShop(shop);
+		assertEquals(1, insertShop);
+	}
+	
+	@Test
+	public void testUpateShop(){
+		Shop shop=new Shop();
+		shop.setShopId(28L);
+		shop.setShopName("测试名");
+		shop.setPhone("1234561");
+		shop.setEnableStatus(1);
+		int updateShop = shopMapper.updateShop(shop);
+		assertEquals(1, updateShop);
+	}
+}

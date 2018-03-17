@@ -1,0 +1,11 @@
+package xyz.marsj.o2o.service;
+
+import java.util.List;
+
+import xyz.marsj.o2o.entity.ProductCategory;
+
+public interface IProductCategoryService {
+List<ProductCategory> queryProductCategoryList(long shopId);
+
+
+}

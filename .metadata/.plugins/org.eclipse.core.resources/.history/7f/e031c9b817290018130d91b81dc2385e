@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+$(function(){
+	getlist();
+	function getlist(e){
+		$.ajax({
+		url:"/o2o/shopadmin/getproductcategorylist",
+		type:"get",
+		dataType:"json",
+		success:function(data){
+			if(data.success){
+				handleList(data.shopList);
+			}
+		}
+		
+	});
+	}
+	
+	function handleList(data){
+		var html='';
+		data.map(function(item,index){
+			html+='<div class="row align-items-start table-bordered"><div class="col">'
+				+item.productCategoryName+'</div> <div class="col">'
+				+item.priority+'</div><div class="col"><a href="#"></a></div></div>';
+		});
+		$('.shop-wrap').html(html);
+	}
+	function shopStatus(status){
+		if(status==0){
+			return '审核中';
+		}else if(status==-1){
+			return '店铺非法';			
+		}else if(status==1){
+			return '审核通过';
+		}
+		return '未知';
+			
+	}
+	
+
+	
+	
+	
+});

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="xyz.marsj.hibernate.cascade" >
+<class name="SalaBill" >
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="sn" ></property>
+	<property name="inputTime" ></property>
+	<set name="sbi" cascade="all-delete-orphan" inverse="true">
+	<key column="BILL_ID"></key>
+	<one-to-many class="SalaBillItem"/>
+	</set>
+</class>
+<class name="SalaBillItem">
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="product" ></property>
+	<many-to-one name="bill" column="BILL_ID"></many-to-one>
+</class>
+
+</hibernate-mapping>

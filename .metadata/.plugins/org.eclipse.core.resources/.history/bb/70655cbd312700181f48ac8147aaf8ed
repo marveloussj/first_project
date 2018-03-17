@@ -1,0 +1,102 @@
+package xyz.marsj.o2o.service.impl;
+
+import java.io.InputStream;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import xyz.marsj.o2o.dto.ShopExecution;
+import xyz.marsj.o2o.entity.Shop;
+import xyz.marsj.o2o.enums.ShopStateEnum;
+import xyz.marsj.o2o.exceptions.ShopOperationException;
+import xyz.marsj.o2o.mapper.ShopMapper;
+import xyz.marsj.o2o.service.IShopService;
+import xyz.marsj.o2o.util.ImgUtil;
+import xyz.marsj.o2o.util.PathUtil;
+
+@Service
+public class ShopServiceImpl implements IShopService {
+	@Autowired
+	private ShopMapper shopMapper;
+	@Override
+	@Transactional
+	public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) {
+		// 空值判断
+		if (shop == null) {
+			return new ShopExecution(ShopStateEnum.NULL_SHOP);
+		}
+		try {
+			// 添加默认值
+			shop.setEnableStatus(0);
+			shop.setCreateTime(new Date());
+			shop.setLastEditTime(new Date());
+			// insertShop
+			int effectNum = shopMapper.insertShop(shop);
+			if (effectNum <= 0) {
+				throw new ShopOperationException("创建店铺失败");
+			} else {
+				if (shopImgInputStream != null) {
+					try {
+						// 存储图片
+						addShopImg(shop, fileName, shopImgInputStream);
+					} catch (Exception e) {
+						throw new ShopOperationException("addShopImg error:" + e.getMessage());
+					}
+					// 更新图片地址
+					effectNum = shopMapper.updateShop(shop);
+					if (effectNum <= 0) {
+						throw new ShopOperationException("更新图片地址失败");
+					}
+				}
+			}
+
+		} catch (Exception e) {
+			throw new ShopOperationException("addShop error:" + e.getMessage());
+		}
+
+		return new ShopExecution(ShopStateEnum.CHECK);
+	}
+
+	private void addShopImg(Shop shop, String fileName, InputStream shopImgInputStream) {
+		String basePath = PathUtil.getImgBasePath();
+
+		String imgUrl = ImgUtil.generateThumbnail(shopImgInputStream, fileName, basePath);
+		shop.setShopImg(imgUrl);
+	}
+
+	@Override
+	public Shop queryByShopId(long ShopId) {
+		return shopMapper.queryByShopId(ShopId);
+	}
+
+	@Override
+	public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName)
+			throws ShopOperationException {
+		if(shop==null||shop.getShopId()==null){
+			return new ShopExecution(ShopStateEnum.NULL_SHOP);
+		}else{
+			//判断是否需要修改图片
+			if(shopImgInputStream!=null && fileName!=null &&!"".equals(fileName)){
+				//获取当前图片信息
+				Shop tempShop= shopMapper.queryByShopId(shop.getShopId());
+				if(tempShop.getShopImg()!=null){
+					ImgUtil.deleteFileOrPath(shop.getShopImg());
+				}
+				addShopImg(shop, fileName, shopImgInputStream);
+			}
+			//更新店铺信息
+				shop.setLastEditTime(new Date());
+				int effectedNum = shopMapper.updateShop(shop);
+				if(effectedNum<=0){
+					return new ShopExecution(ShopStateEnum.INNER_ERROR);
+				}else{
+					//更新成功
+					shopMapper.queryByShopId(shop.getShopId()i)
+				}
+		}
+		return null;
+	}
+
+}

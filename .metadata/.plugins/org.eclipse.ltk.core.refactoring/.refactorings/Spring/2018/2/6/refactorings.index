@@ -1,0 +1,24 @@
+1517887860985	Rename package 'xyz.marsj.hibernate.mvc'
+1517887869520	Rename package 'xyz.marsj.container'
+1517887876622	Rename package 'xyz.marsj.name'
+1517887882975	Rename package 'xyz.marsj.hello'
+1517887917685	Copy file
+1517888911087	Rename resource 'ContainerTest-context.xml'
+1518054807762	Delete element
+1518056645308	Copy elements
+1518056660230	Rename type 'ContainerTest'
+1518056696938	Rename resource 'ContainerTest-context.xml'
+1518075189827	Delete element
+1518075861624	Copy file
+1518075870684	Rename resource 'DynProxyTest-context.xml'
+1518077418183	Copy compilation unit
+1518077457975	Copy compilation unit
+1518088032874	Delete element
+1518088989977	Copy file
+1518088995771	Rename resource 'AnnoAOPTest-context.xml'
+1518089019398	Rename resource 'jdbcTest-context.xml'
+1518173499616	Delete element
+1518174197286	Delete element
+1518174200172	Copy file
+1518174210688	Rename resource 'AnnoAOPTest-context.xml'
+1518174226171	Rename resource 'txTest-context.xml'

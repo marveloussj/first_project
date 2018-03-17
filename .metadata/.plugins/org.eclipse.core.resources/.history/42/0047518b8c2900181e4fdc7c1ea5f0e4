@@ -1,0 +1,29 @@
+package xyz.marsj.o2o.dto;
+
+import java.util.List;
+
+import xyz.marsj.o2o.entity.ProductCategory;
+import xyz.marsj.o2o.enums.ShopStateEnum;
+
+public class ProductCategoryExecution {
+	private int state;
+	private String stateInfo;
+	private List<ProductCategory> productCategory;
+	public ProductCategoryExecution() {
+		
+	}
+	//操作店铺失败时使用的构造器
+	public ProductCategoryExecution(ShopStateEnum stateEnum) {
+		this.state=stateEnum.getState();
+		this.stateInfo=stateEnum.getStateInfo();
+	}
+	//操作店铺成功时使用的构造器
+	public ProductCategoryExecution(List<ProductCategory> productCategory) {
+		super();
+		this.productCategory = productCategory;
+	}
+
+	
+	
+	
+}

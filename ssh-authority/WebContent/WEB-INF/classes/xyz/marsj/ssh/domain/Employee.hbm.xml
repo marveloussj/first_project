@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="xyz.marsj.ssh.domain" >
+<class name="Employee" table="employee">
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="userName" column="userName"></property>
+	<property name="password" column="password"></property>
+	<property name="email" ></property>
+	<property name="admin" ></property>
+	<property name="age" ></property>
+	<many-to-one name="dept" column="dept_id"></many-to-one>
+	<bag name="roles" table="employees_roles">
+		<key column="employee_id"></key>
+		<many-to-many class="Role" column="role_id"></many-to-many>
+	</bag>
+</class>
+
+</hibernate-mapping>

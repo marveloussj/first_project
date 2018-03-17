@@ -1,0 +1,17 @@
+package xyz.marsj.o2o.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import xyz.marsj.o2o.entity.Shop;
+
+public interface ShopMapper {
+	List<Shop> queryShopList(@Param("ShopCondition"),);
+	//查询店铺
+	Shop queryByShopId(long ShopId);
+	//新增店铺
+	int insertShop(Shop shop);
+	//更新店铺
+	int updateShop(Shop shop);
+}

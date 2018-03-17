@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+$(function(){
+	var shopInfoUrl ="/"
+	$.getJSON(shopInfoUrl,function(data){
+		if(data.success){
+			
+		}
+		});
+	
+	
+});

@@ -1,0 +1,22 @@
+package xyz.marsj.o2o.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import xyz.marsj.o2o.entity.ShopCategory;
+import xyz.marsj.o2o.mapper.ShopCategoryMapper;
+import xyz.marsj.o2o.service.IShopCategoryService;
+@Service
+public class ShopCategoryServiceImpl implements IShopCategoryService{
+	@Autowired
+	private ShopCategoryMapper shopcategoryMapper;
+	@Override
+	public List<ShopCategory> queryShopCategory(ShopCategory shopCategory) {
+		
+		return shopcategoryMapper.queryShopCategory(shopCategory);
+	}
+	
+
+}

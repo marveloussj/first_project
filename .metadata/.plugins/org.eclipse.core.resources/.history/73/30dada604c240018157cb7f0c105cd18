@@ -1,0 +1,8 @@
+package xyz.marsj.o2o.service.impl;
+
+import java.util.List;
+
+public interface IShopCategoryService {
+	List<ShopCategory> queryShopCategory;
+
+}

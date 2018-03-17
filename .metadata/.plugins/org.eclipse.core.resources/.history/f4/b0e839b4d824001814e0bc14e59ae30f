@@ -1,0 +1,11 @@
+package xyz.marsj.o2o.util;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class CodeUtil {
+	public static boolean checkVerifyCode(HttpServletRequest request){
+		request.getSession().getAttribute(
+				com.google.code.kaptcha.servlet.KaptchaServlet)
+		
+	}
+}

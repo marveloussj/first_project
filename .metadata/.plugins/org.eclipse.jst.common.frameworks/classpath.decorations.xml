@@ -1,0 +1,15 @@
+<classpath>
+  <container id="ssh!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/sj/Desktop/work/ssh/WebContent/WEB-INF/lib/spring-orm-5.0.3.RELEASE.jar">
+      <source-attachment-path>D:/360安全浏览器下载/spring-framework-5.0.3.RELEASE-dist/spring-framework-5.0.3.RELEASE/libs/spring-orm-5.0.3.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="C:/Users/sj/Desktop/work/ssh/WebContent/WEB-INF/lib/spring-web-5.0.3.RELEASE.jar">
+      <source-attachment-path>D:/360安全浏览器下载/spring-framework-5.0.3.RELEASE-dist/spring-framework-5.0.3.RELEASE/libs/spring-web-5.0.3.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="ssh-authority!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/sj/Desktop/work/ssh-authority/WebContent/WEB-INF/lib/spring-orm-5.0.3.RELEASE.jar">
+      <source-attachment-path>D:/360安全浏览器下载/spring-framework-5.0.3.RELEASE-dist/spring-framework-5.0.3.RELEASE/libs/spring-orm-5.0.3.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

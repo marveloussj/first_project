@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+$(function(){
+	var shopId=
+	var shopInfoUrl ="/o2o/shopadmin/getshopmanagementinfo?shopId="+shopId;
+	$.getJSON(shopInfoUrl,function(data){
+		if(data.success){
+			
+		}
+		});
+	
+	
+});

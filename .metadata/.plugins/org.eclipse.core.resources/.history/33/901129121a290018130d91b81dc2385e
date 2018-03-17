@@ -1,0 +1,35 @@
+/**
+ * 
+ */
+$(function(){
+	getlist();
+	function getlist(e){
+		$.ajax({
+		url:"/o2o/shopadmin/getproductcategorylist",
+		type:"get",
+		dataType:"json",
+		success:function(data){
+			if(data.success){
+				handleList(data.data);
+			}
+		}
+		
+	});
+	}
+	
+	function handleList(data){
+		var html='';
+		data.map(function(item,index){
+			html+='<div class="row align-items-start table-bordered"><div class="col">'
+				+item.productCategoryName+'</div> <div class="col">'
+				+item.priority+'</div><div class="col"><a class="btn btn-info" href="#" role="button">删除</a></div></div>';
+		});
+		$('.shop-wrap').html(html);
+	}
+
+	
+
+	
+	
+	
+});

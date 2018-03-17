@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/spring-beans-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/spring-aop-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-expression-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-test-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/druid-1.0.13.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.24-bin.jar"/>
+	<classpathentry kind="lib" path="lib/spring-jdbc-5.0.3.RELEASE.jar" sourcepath="D:/360安全浏览器下载/spring-framework-5.0.3.RELEASE-dist/spring-framework-5.0.3.RELEASE/libs/spring-jdbc-5.0.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring-tx-5.0.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

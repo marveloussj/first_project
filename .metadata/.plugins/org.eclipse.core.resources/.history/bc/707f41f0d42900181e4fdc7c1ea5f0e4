@@ -1,0 +1,14 @@
+package xyz.marsj.o2o.service;
+
+import java.util.List;
+
+import xyz.marsj.o2o.dto.ProductCategoryExecution;
+import xyz.marsj.o2o.entity.ProductCategory;
+import xyz.marsj.o2o.exceptions.ProductCategoryOperationException;
+
+public interface IProductCategoryService {
+List<ProductCategory> queryProductCategoryList(long shopId);
+
+ProductCategoryExecution batchAddProductCategory(List<ProductCategory> productCategoryList) throws ProductCategoryOperationException;
+int delectProductCategory()
+}

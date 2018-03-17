@@ -1,0 +1,12 @@
+package xyz.marsj.o2o.service;
+
+import java.io.InputStream;
+
+import xyz.marsj.o2o.dto.ShopExecution;
+import xyz.marsj.o2o.entity.Shop;
+
+public interface IShopService {
+	//z注册店铺
+	ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName);
+	
+}

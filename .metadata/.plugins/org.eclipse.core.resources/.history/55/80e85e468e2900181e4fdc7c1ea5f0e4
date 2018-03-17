@@ -1,0 +1,12 @@
+package xyz.marsj.o2o.service;
+
+import java.util.List;
+
+import xyz.marsj.o2o.entity.ProductCategory;
+import xyz.marsj.o2o.enums.ProductCategoryStateEnum;
+
+public interface IProductCategoryService {
+List<ProductCategory> queryProductCategoryList(long shopId);
+
+ProductCategoryStateEnum batchAddProductCategory(List<ProductCategory> productCategoryList);
+}

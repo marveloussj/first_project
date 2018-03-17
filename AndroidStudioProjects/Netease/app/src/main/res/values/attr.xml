@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeView">
+        <attr name="OutColor" format="color"></attr>
+        <attr name="InnerColor" format="color"></attr>
+    </declare-styleable>
+</resources>

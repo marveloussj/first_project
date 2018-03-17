@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="xyz.marsj.hibernate.query" >
+<class name="Department" >
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="name"></property>
+	<component name="address">
+		<property name="provice"></property>
+		<property name="city"></property>
+		<property name="street"></property>
+	</component>
+	<property name="sn"></property>
+	<many-to-one name="manager" column="MANAGER_ID"></many-to-one>
+	<set name="emps">
+	<key column="DEPT_ID"></key>
+	<one-to-many class="Employee"/>
+	</set>
+</class>
+<class name="Employee">
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="name"></property>
+	<property name="salay"></property>
+	<property name="hireDate" type="date"></property>
+	<many-to-one name="dept" column="DEPT_ID"></many-to-one>
+</class>
+
+<class name="Phone">
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="types">
+		<type name="org.hibernate.type.EnumType">
+			<param name="enumClass">xyz.marsj.hibernate.query.PhoneType</param>
+			<param name="useNamed">true</param>
+		</type>
+	</property>
+	<property name="number"></property>
+	<many-to-one name="employee" column="EMPLOYEE_ID"></many-to-one>
+</class>
+
+
+<class name="Project">
+	<id name="id" column="id">
+	 <generator class="native"></generator>
+	</id>
+	<property name="name"></property>
+	<many-to-one name="manager" column="MANAGER_ID"></many-to-one>
+	<set name="employees" table="project_employee">
+		<key column="PROJECT_ID"></key>
+		<many-to-many class="Department" column="EMPLOYEE_ID"></many-to-many>
+	</set>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+package xyz.marsj.o2o.mapper;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import xyz.marsj.o2o.BaseTest2;
+import xyz.marsj.o2o.entity.ProductCategory;
+
+public class ProductMapperTest extends BaseTest2 {
+	@Autowired
+	private ProductCategoryMapper productCategoryMapper;
+	@Test
+	public void testAreaQuery(){
+	  List<ProductCategory> queryProductCategoryList = productCategoryMapper.queryProductCategoryList(20L);
+		assertEquals(5, queryProductCategoryList.size());
+	}
+	@Test
+	public void testBatchAddProductCategory(){
+		List<ProductCategory> list= new ArrayList<>();
+		ProductCategory pc1=new ProductCategory();
+		pc1.setProductCategoryName("t1");
+		pc1.setPriority(1);
+		pc1.setCreateTime(new Date());
+		pc1.setShopId(15L);
+		ProductCategory pc2=new ProductCategory();
+		pc2.setProductCategoryName("t2");
+		pc2.setPriority(2);
+		pc2.setCreateTime(new Date());
+		pc2.setShopId(15L);
+		list.add(pc1);
+		list.add(pc2);
+		int effectedNum = productCategoryMapper.batchInsertProductCategory(list);
+		
+	}
+}

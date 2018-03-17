@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+		
+		<package name="interceptorPkg" extends="struts-default" namespace="/interceptor">
+			<interceptors>
+				<interceptor name="loginInterceptor" class="xyz.marsj.struct2.interceptor.LoginInterceptor"></interceptor>
+			</interceptors>
+			<global-results >
+				<result name="login">/views/interceptor/login.jsp</result>
+			</global-results>
+			<action name="login_*" class="xyz.marsj.struct2.interceptor.LoginAction" method="{1}">
+				<result name="login">/views/interceptor/login.jsp</result>
+				<result name="success" type="redirectAction">
+					<param name="namespace">/interceptor</param>
+					<param name="actionName">main</param>
+				</result>
+			</action>
+			<action name="main">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<result>/views/interceptor/main.jsp</result>
+			</action>
+		</package>
+		
+</struts>
+
+

@@ -1,0 +1,8 @@
+package xyz.marsj.hibernate.cascade;
+
+public interface SalaBillDao {
+void save(SalaBill bill);
+void update(SalaBill bill);
+void delete(Long id);
+void get(Long id);
+}

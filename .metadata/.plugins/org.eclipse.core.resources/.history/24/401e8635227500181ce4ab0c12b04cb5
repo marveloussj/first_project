@@ -1,0 +1,26 @@
+package interview.tree;
+
+public class InOrder {
+	public TreeNode next(TreeNode node){
+		if(node==null){
+			return null;
+		}
+		if(node.getRight()!=null){
+			return first(node.getRight());
+		}
+		while()
+		
+	}
+
+	public TreeNode first(TreeNode node) {
+		if(node==null){
+			return null;
+		}
+		TreeNode curNode=node;
+		if(curNode.getLeft()!=null){
+			curNode=curNode.getLeft();
+		}
+		return curNode;
+	}
+
+}

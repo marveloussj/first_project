@@ -1,0 +1,13 @@
+package interview.opp.linkedlist;
+
+import java.util.Iterator;
+
+public class LinkedList implements Iterable<Integer>{
+
+	@Override
+	public Iterator<Integer> iterator() {
+		
+		return null;
+	}
+
+}

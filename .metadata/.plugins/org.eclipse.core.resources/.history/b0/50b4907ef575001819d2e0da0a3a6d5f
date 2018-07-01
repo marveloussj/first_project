@@ -1,0 +1,51 @@
+package interview.opp.linkedlist;
+
+import java.util.Iterator;
+
+import interview.loop.Node;
+
+public class LinkedList implements Iterable<Integer>{
+	private Node head;
+	private Node tail;
+	public LinkedList() {
+		this.head=null;
+		this.tail=null;
+	}
+	
+	public void add(int value) {
+		Node node=new Node(value);
+		if(tail==null){
+			head=node;
+		}else{
+			tail.setNext(node);
+		}
+		tail=node;		
+	}
+	
+	class ListIterator implements Iterator<Integer>{
+		Node currentNode;
+		public ListIterator(Node node) {
+			currentNode=node;
+		}
+		@Override
+		public boolean hasNext() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public Integer next() {
+			int value = currentNode.getValue();
+			currentNode=currentNode.getNext();
+			return value;
+		}
+	}
+	@Override
+	public Iterator<Integer> iterator() {
+		
+		return null;
+	}
+
+
+
+}

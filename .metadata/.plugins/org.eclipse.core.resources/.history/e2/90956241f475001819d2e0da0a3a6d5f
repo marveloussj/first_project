@@ -1,0 +1,5 @@
+package interview.opp.linkedlist;
+
+public class LinkedList implements Iterable<Integer>{
+
+}

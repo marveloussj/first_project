@@ -1,0 +1,18 @@
+package interview.tree;
+
+public class InOrder {
+	public TreeNode next(TreeNode node){
+		if(node==null){
+			return null;
+		}
+		if(node.getRight()!=null){
+			return first(node.getRight());
+		}
+	}
+
+	public TreeNode first(TreeNode right) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

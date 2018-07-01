@@ -1,0 +1,12 @@
+127.0.0.1 - - [06/Apr/2018:15:38:41 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:38:57 +0800] "GET /o2o/shopadmin/shoplist HTTP/1.1" 200 91
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:38:57 +0800] "GET /o2o/shopadmin/getshoplist HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:38:58 +0800] "GET /o2o/Kaptcha HTTP/1.1" 200 2831
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:03 +0800] "POST /o2o/local/logincheck HTTP/1.1" 200 27
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:04 +0800] "GET /o2o/shopadmin/shoplist HTTP/1.1" 200 2543
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:05 +0800] "GET /o2o/shopadmin/getshoplist HTTP/1.1" 200 12152
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:08 +0800] "GET /o2o/shopadmin/getshopmanagementinfo?shopId=15 HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:09 +0800] "GET /o2o/Kaptcha HTTP/1.1" 200 2633
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:09 +0800] "GET /o2o/shopadmin/getshopbyid?shopId=15 HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:14 +0800] "GET /o2o/shopadmin/getproductlistbyshop?pageIndex=1&pageSize=100 HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [06/Apr/2018:15:39:15 +0800] "GET /o2o/shopadmin/productmanage HTTP/1.1" 200 -

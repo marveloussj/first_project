@@ -1,0 +1,10 @@
+package interview.tree;
+
+public class InOrder {
+	public TreeNode next(TreeNode node){
+		if(node==null){
+			return null;
+		}
+	}
+
+}

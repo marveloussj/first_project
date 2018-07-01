@@ -1,0 +1,7 @@
+package interview.google;
+
+public class BeautifyNumber {
+public static void main(String[] args) {
+	
+}
+}

@@ -1,0 +1,22 @@
+2018-04-04 10:26:21.765 [main] DEBUG xyz.marsj.o2o.util.EncryptPropertyPlaceholderConfigurer -
+				Loading properties file from class path resource [jdbc.properties]
+2018-04-04 10:26:21.772 [main] DEBUG xyz.marsj.o2o.util.EncryptPropertyPlaceholderConfigurer -
+				Loading properties file from class path resource [redis.properties]
+2018-04-04 10:26:25.377 [main] DEBUG xyz.marsj.o2o.mapper.PersonInfoMapper.insertPersonInfo -
+				==>  Preparing: INSERT INTO tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag, shop_owner_flag,admin_flag,create_time,last_edit_time,enable_status) VALUES (?,?,?,?,?,?,?, ?,?,?,?,?) 
+2018-04-04 10:26:25.416 [main] DEBUG xyz.marsj.o2o.mapper.PersonInfoMapper.insertPersonInfo -
+				==> Parameters: 测试(String), null, null, null, null, null, null, null, null, 2018-04-04 10:26:25.346(Timestamp), null, 1(Integer)
+2018-04-04 10:26:25.490 [main] DEBUG xyz.marsj.o2o.mapper.PersonInfoMapper.insertPersonInfo -
+				<==    Updates: 1
+2018-04-04 10:26:25.510 [main] DEBUG xyz.marsj.o2o.mapper.WechatAuthMapper.insertWechatAuth -
+				==>  Preparing: INSERT INTO tb_wechat_auth(user_id,open_id,create_time) VALUES (?,?,?) 
+2018-04-04 10:26:25.517 [main] DEBUG xyz.marsj.o2o.mapper.WechatAuthMapper.insertWechatAuth -
+				==> Parameters: 14(Long), ceshi(String), 2018-04-04 10:26:25.346(Timestamp)
+2018-04-04 10:26:25.601 [main] DEBUG xyz.marsj.o2o.mapper.WechatAuthMapper.insertWechatAuth -
+				<==    Updates: 1
+2018-04-04 10:26:25.752 [main] DEBUG x.marsj.o2o.mapper.WechatAuthMapper.queryWechatAuthById -
+				==>  Preparing: SELECT w.wechat_auth_id,w.user_id,w.open_id,w.create_time, p.user_id,p.name,p.birthday,p.gender,p.phone,p.email,p.profile_img,p.customer_flag, p.shop_owner_flag,p.admin_flag,p.create_time,p.last_edit_time,p.enable_status FROM tb_wechat_auth w LEFT JOIN tb_person_info p ON w.user_id=p.user_id WHERE open_id=? 
+2018-04-04 10:26:25.753 [main] DEBUG x.marsj.o2o.mapper.WechatAuthMapper.queryWechatAuthById -
+				==> Parameters: ceshi(String)
+2018-04-04 10:26:25.872 [main] DEBUG x.marsj.o2o.mapper.WechatAuthMapper.queryWechatAuthById -
+				<==      Total: 1
